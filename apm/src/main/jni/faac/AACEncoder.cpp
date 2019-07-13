@@ -28,7 +28,7 @@
 
 #include <cstdlib>
 #include "AACEncoder.h"
-
+#include <memory.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
