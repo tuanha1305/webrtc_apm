@@ -15,13 +15,14 @@ android {
 
         if (!isUseCmake) {
             ndk{
-                abiFilters "armeabi-v7a","arm64-v8a","armeabi"
+                abiFilters "armeabi-v7a","arm64-v8a"
                 ldLibs "log"
             }
         } else {
             externalNativeBuild {
                 cmake {
-                    abiFilters 'armeabi-v7a' //'armeabi-v7a' 'arm64-v8a'  'armeabi'
+                    abiFilters 'armeabi-v7a' ,'arm64-v8a' //'armeabi-v7a' 'arm64-v8a'  'armeabi'
+//                    cppFlags "-std=c++11 -fexceptions -Werror=return-type -D__STDC_LIMIT_MACROS -fexceptions  -frtti"
                     cppFlags "-std=c++11 -fexceptions -Werror=return-type -D__STDC_LIMIT_MACROS -fexceptions  -frtti"
                     arguments "-DANDROID_ARM_NEON=TRUE"
                 }
